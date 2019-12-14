@@ -1,0 +1,6 @@
+<template name="pluy_back">
+  <view class="back" catchtap="back" data-type="{{type}}">
+      <image src="/images/back.png"></image>
+  </view>
+
+</template>

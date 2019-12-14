@@ -1,0 +1,95 @@
+/* components/share-compon/share-compon.wxss */
+.sharePgae{
+  position: fixed;
+  
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(0, 0,0,.8); */
+  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,1));
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 1s linear;
+}
+.animation{
+ 
+  opacity: 1;
+  
+  
+}
+.bottom-tap{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 250rpx;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.bottom-tap view{
+  width: 130rpx;
+  height: 120rpx;
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color:rgba(255,255,255,.8);
+  
+}
+.save{
+  margin-left:20%;
+}
+.img{
+  width: 90rpx !important;
+  height: 90rpx !important;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  margin: auto;
+}
+.share-wx{
+  /* margin-right:20%; */
+  width:120rpx;
+  height: 170rpx;
+}
+.share-wx image,.save image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ttex{
+  margin-top:10rpx;
+  font-size: 26rpx
+}
+.poster_content{
+  position: absolute;
+  top:15%;
+  width: 100%;
+  height: 64vh !important;
+ 
+}
+.swiper{
+  height: 64vh !important;
+}
+.swiper-item{
+  position: relative;
+}
+.swiper-item image{
+  display: block;
+  width: 500rpx;
+  height: 100%;
+  /* margin: 0 50rpx; */
+  border-radius: 40rpx;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

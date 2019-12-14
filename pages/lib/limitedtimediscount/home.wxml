@@ -1,0 +1,34 @@
+<template name="limitedtimediscount">
+  <view wx:if="{{plugins_limitedtimediscount_data.length > 0}}" class="limitedtimediscount">
+    <view class="nav-title spacing-nav-title">
+      <!-- <image class="nav-icon" src="/pages/lib/limitedtimediscount/nav-icon.png" mode="aspectFit"></image> -->
+      <text class="line"></text>
+      <text class="text-wrapper">优选品牌</text>
+      <!-- <view class="countdown">
+        <block wx:if="{{plugins_limitedtimediscount_is_show_time}}">
+          <view class="timer-hours seconds">{{plugins_limitedtimediscount_data.time.seconds}}</view>
+          <view class="ds">:</view>
+          <view class="timer-hours minutes">{{plugins_limitedtimediscount_data.time.minutes}}</view>
+          <view class="ds">:</view>
+          <view class="timer-hours hours">{{plugins_limitedtimediscount_data.time.hours}}</view>
+        </block>
+        <view class="timer-title">{{plugins_limitedtimediscount_timer_title}}</view>
+      </view> -->
+    </view>
+    <view class="goods-list">
+      <scroll-view scroll-x scroll-with-animation>
+        <view wx:for="{{plugins_limitedtimediscount_data}}" wx:key="key" class="item">
+          <navigator url="/pages/brand-merchant/brand-merchant?brand_merchant_id={{item.id}}" hover-class="none">
+            <image class="dis-block" src="{{item.logo_address}}" mode="scaleToFill"></image>
+            <view class="goods-base">
+              <view class="f-w single-text">{{item.name}}</view>
+              <!-- <view class="goods-price single-text">{{item.description}}</view> -->
+              <!-- <view wx:if="{{(item.original_price || null) != null}}" class="goods-original-price single-text">￥{{item.original_price}}</view> -->
+              <!-- <button size="mini">进店</button> -->
+            </view>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

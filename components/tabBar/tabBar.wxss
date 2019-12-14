@@ -1,0 +1,67 @@
+.tabBar{
+  position: fixed;
+  left: 0;
+  bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content : space-between;
+  color:#fff;
+}
+.tabBar-lt{
+  flex:1;
+  background-image:linear-gradient(-45deg,rgb(6, 114, 216),rgb(88, 165, 236));
+  border-radius: 40rpx;
+  margin-left:30rpx;
+  display: flex;
+  text-align: center;
+  justify-items: center;
+}
+.tabBar-item{
+  padding:10rpx;
+  margin-left:0;
+  margin-right: 0;
+  margin: auto;
+  line-height: 26rpx;
+  /* margin-top:5rpx; */
+  margin-bottom:5rpx;
+}
+
+.tabBar-item view{
+  font-size: 26rpx;
+  overflow:  visible;
+}
+
+.tabBar-lt image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top:5rpx; 
+}
+.tabBar-rt{
+  width: 110rpx;
+ background-image:linear-gradient(-45deg,rgb(6, 114, 216),rgb(88, 165, 236));
+  border-radius: 40rpx;
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+}
+.tabBar-share{
+  text-align: center;
+ line-height: 26rpx;
+
+  margin: auto;
+  margin-top:5rpx;
+}
+.tabBar-rt image{
+  width: 40rpx;
+  height: 40rpx;
+  padding-top:10rpx;
+}
+.pos-r{
+  position: relative;
+
+}
+.cart-count{
+  position: absolute;
+  top:2rpx;
+  right: 25rpx;
+}

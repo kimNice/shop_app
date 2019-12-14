@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "component-tabBar": "/components/tabBar/tabBar",
+    "navigate-title": "/components/navigateTitle/navigateTitle",
+    "share-compon": "/components/share-compon/share-compon"
+  },
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor":"#348EFF"
+}

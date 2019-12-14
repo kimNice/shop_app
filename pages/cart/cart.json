@@ -1,0 +1,8 @@
+{
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+      "component-tabBar": "/components/tabBar/tabBar",
+      "navigate-title": "/components/navigateTitle/navigateTitle",
+      "share-compon": "/components/share-compon/share-compon"
+    }
+}

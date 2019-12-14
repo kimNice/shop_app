@@ -1,0 +1,29 @@
+<view class="tabBar">
+    <view class="tabBar-lt">
+        <view class="tabBar-item"  bindtap="onTab"  data-index="0">
+            <image src="{{updateIndex == 0 ? navList[0].activeUrl:navList[0].url}}"></image>
+            <view style="color:{{updateIndex == 0 ? '#ffb345':'#fff'}}">{{navList[0].title}}</view>
+        </view>
+        <view class="tabBar-item" data-index="1" bindtap="onTab">
+          <image src="{{updateIndex == 1 ? navList[1].activeUrl:navList[1].url}}"></image>
+          <view style="color:{{updateIndex == 1  ? '#ffb345':'#fff'}}">{{navList[1].title}}</view>
+        </view>
+        <view class="tabBar-item pos-r" data-index="2" bindtap="onTab">
+          <!-- <view class="cart-count">
+            <component-badge prop-number="{{quick_nav_cart_count}}"></component-badge>
+          </view> -->
+          <image src="{{updateIndex == 2 ? navList[2].activeUrl:navList[2].url}}"></image>
+          <view style="color:{{updateIndex == 2  ? '#ffb345':'#fff'}}">{{navList[2].title}}</view>
+        </view>
+        <view class="tabBar-item" data-index="3" bindtap="onTab">
+          <image src="{{updateIndex == 3 ? navList[3].activeUrl:navList[3].url}}"></image>
+          <view style="color:{{updateIndex == 3  ? '#ffb345':'#fff'}}">{{navList[3].title}}</view>
+        </view>
+    </view>
+    <view class="tabBar-rt" bindtap="share">
+      <view class="tabBar-share">
+          <image src="/images/fenxiang-1.png"></image>
+          <view>分享</view>
+      </view>
+    </view>
+</view>

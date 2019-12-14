@@ -1,0 +1,70 @@
+<navigate-title title="{{nav_title}}" />
+<!-- 头部 -->
+<view class="how-money-top">
+    <view class="how-top">
+        <image src="https://dcdn.it120.cc/2019/11/26/b9d6f409-86e9-4189-b507-c3bed4cdc254.jpg"></image>
+
+        <!-- <view class="plan-view">
+            
+            <view class="control-view">
+              <movable-area class="movable-area">
+                <movable-view class="movable-view" disabled="true" direction="horizontal" x="{{movable_X}}" damping="1000"></movable-view>
+              </movable-area>
+              <progress stroke-width="15" activeColor="#F6D4A8" backgroundColor="#FFF" percent="{{progress}}"></progress>
+            </view>
+            <view class="hint" style="left:{{left-20}}px;">
+              还差{{differ}}人
+            </view>
+        </view>
+         -->
+        <button class="invite-botton" plain='true' type="default" size="mini" open-type="share" hover-class="none" style="border:none">
+            <image src="/images/share-btn.png" mode="widthFix" width="100%" />
+          </button>
+    </view>
+    <view class="top-two">
+        <image src="https://dcdn.it120.cc/2019/11/09/aa824323-3b0f-48e2-aa8b-71242132afd6.png"></image>
+    </view>
+
+</view>
+<view class="how-title">
+  <view class="title">
+    <view class="title-h1">
+      <image src="/images/logo-gx.png" mode="widthFix"></image>
+    </view>
+    <view class="title-qrcode">
+      <image src="/images/qrcode.png" mode="widthFix"></image>
+    </view>
+  </view>
+  <view class="how-botton">
+    <text>加入搞鲜如何赚钱？</text>
+  </view>
+  <view class="how-text">
+    <image src="/images/text.png" mode="widthFix"></image>
+  </view>
+  <view class="share-pic">
+    <navigator url="/pages/answer-form/answer-form" hover-class="none" class="bg-white">
+      <button class="bg-main bg-ph">了解咨询</button>
+    </navigator>
+    <button data-type="0" data-value="http://192.168.50.213/index.php?s=/index/agent/AgentAdd/token/{token}.html" bindtap="navigation_event" class="bg-main bg-ph">申请加盟</button>
+  </view>
+</view>
+<view class="pic-bottom">
+  <image style="display:block;margin:auto;" src="https://dcdn.it120.cc/2019/11/08/98cc55fd-2b1c-4a22-9a5d-84c5fad6949a.png" mode="widthFix"></image>
+</view>
+
+<view style="width:100%;background:#fff;">
+  <view class="how-botton">
+    <text>如何成为区域会员(区主)？</text>
+  </view>
+</view>
+<view class="pic-bottom">
+  <image style="display:block;margin:auto;" src="https://dcdn.it120.cc/2019/11/08/2060bf40-c1f3-4223-b169-d839f9b9058c.png" mode="widthFix"></image>
+</view>
+<!-- 版权 -->
+<import src="/pages/common/copyright.wxml" />
+<template is="copyright"></template>
+
+<!-- 分享弹窗 -->
+<share-compon showShare="{{!showShare}}" id="share"/>
+<!-- tabBar -->
+<component-tabBar bind:shareCompon="onshareCompon" />

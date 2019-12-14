@@ -1,0 +1,25 @@
+<!--components/share-compon/share-compon.wxml-->
+
+<view class="sharePgae {{showShare?'':'animation'}}" hidden="{{showShare}}" catchtap="colseMask">
+  <view class='poster_content'>
+      <swiper class="swiper"  current="{{index}}" previous-margin="50px" bindchange="onChange" next-margin="50px" easing-function="easeInOutCubic">
+        <block wx:for="{{list}}" wx:key="item">
+          <swiper-item class="swiper-item">
+              <image src="{{item.url}}" mode="aspectFit"></image>
+          </swiper-item>
+        </block>
+          
+      </swiper>
+  </view>
+  <view class="bottom-tap">
+      <button open-type="share" id="btnid" data-url="{{imgUrl}}" style="display:none"></button>
+      <label class="share-wx" for="btnid">
+          <view class="img"><image src="/images/share-weixin-icon.png"></image></view>
+          <view class="ttex">分享好友</view>
+      </label>
+       <view class="save" catchtap="saveImg">
+          <image src="/images/xiazai.png"></image>
+          <view class="ttex" catchtap="saveImg">保存图片</view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,123 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.2",
+	"appid": "wxab3a3d2501785d82",
+	"projectname": "gaoxian_wxapp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "分包加盟点",
+					"pathName": "pages/station/station",
+					"query": "stid=2&referrer=E44455D3",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "扫码",
+					"pathName": "pages/brand-merchant/brand-merchant",
+					"query": "bmid=1",
+					"scene": 1011
+				},
+				{
+					"id": 2,
+					"name": "门店",
+					"pathName": "pages/shop/shop",
+					"query": "spid=2&referrer=2",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "主页",
+					"pathName": "pages/index/index",
+					"query": "referrer=20",
+					"scene": 1011
+				},
+				{
+					"id": 4,
+					"name": "品牌商",
+					"pathName": "pages/brand-merchant/brand-merchant",
+					"query": "bmid=1&referrer=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "赚钱",
+					"pathName": "pages/zhuanqian/zhuanqian",
+					"query": "referrer=20",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "个人中心",
+					"pathName": "pages/user/user",
+					"query": "referrer=20",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods-detail/goods-detail",
+					"pathName": "pages/goods-detail/goods-detail",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

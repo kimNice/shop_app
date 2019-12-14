@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "component-popup": "/components/popup/popup",
+    "navigate-title": "/components/navigateTitle/navigateTitle"
+  }
+}

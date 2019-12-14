@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "navigate-title": "/components/navigateTitle/navigateTitle"
+  }
+}

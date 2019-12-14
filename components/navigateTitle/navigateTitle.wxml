@@ -1,0 +1,41 @@
+<view class="navigate-container">
+  <view style="height:{{statusBarHeight}}px"></view>
+  <view class="navigate-bar" style="height:{{titleBarHeight}}px">
+    <view class="navigate-icon" wx:if="{{isShowHome}}">
+      <image src="/images/wxlogo1.png" mode="widthFix" ></image>
+      <!-- <navigator class="navigator-back jiantou" open-type="navigateBack" wx:if="{{!isShowHome}}" /> -->
+      <!-- <navigator class="navigator-home" open-type="switchTab" url="/pages/index/index" wx:else /> -->
+    </view>
+    <view class="jiantou" wx:if="{{!isShowHome && jiantou}}" >
+      
+      <image  src="/images/changyongtubiao-xianxingdaochu-zhuanqu-.png" bindtap="navToBack"></image>
+      <!-- <navigator class="navigator-home" open-type="switchTab" url="/pages/index/index" wx:else /> -->
+    </view>
+    <view class="text-center" wx:if="{{!isShowHome}}" style="margin-left:{{!isShowHome && jiantou?'':'5'}}%">
+        <navigator hover-class="none" url="/pages/index/index" wx:if="{{index_img != 0}}">
+            <image class="index" src="/images/1.png"></image>
+        </navigator>
+        <view wx:if="{{is_nav_list_show}}" class="wenzi"><text>{{title}}</text></view>
+        <view wx:else>
+          <view class="nav_list">
+            <image src="/images/liebiao.png" catchtap="on_list"></image>
+
+            <view class="liebiao" style="opacity:{{on_off?'0':'1'}};">
+              <view class="liebiao-item" wx:for="{{nav_list}}" wx:key="index" data-index="{{item.value}}" catchtap="on_nav">
+                <image src="{{item.imgUrl}}"></image>
+                <text>{{item.title}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        
+        
+    </view>
+    <view class="navigate-title">
+      <image src="/images/sousuo.png" wx:if="{{sousuo&&isShowHome}}" mode="widthFix" class="img-sousuo"></image>
+      <input type="text" confirm-type="search" bindinput="onbindinput" placeholder="搜索" class="title" bindconfirm="search_input_event" confirm-type="search" wx:if="{{isShowHome}}"/>
+    </view>
+    <view class="navigate-icon"></view>
+  </view>
+</view>
+<view class="navigate-line" style="height: {{statusBarHeight + titleBarHeight}}px; width: 100%;"></view>

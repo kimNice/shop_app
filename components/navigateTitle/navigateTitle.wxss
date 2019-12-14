@@ -1,0 +1,157 @@
+.navigate-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-image:linear-gradient(-45deg,rgb(38, 128, 211),rgb(88, 165, 236));
+
+}
+ 
+.navigate-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title{
+  background: #f1f1f1;
+  /* margin-top: 20rpx; */
+  width: 350rpx;
+  font-size: 26rpx;
+  height: 50rpx;
+
+}
+.navigate-icon {
+  width: 135rpx;
+  /* height: 80rpx; */
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  
+}
+.jiantou{
+  width: 90rpx;
+  /* height: 80rpx; */
+  /* transform: translateX(-20%); */
+  /* vertical-align: center; */
+  display: flex;
+  align-items: center;
+}
+.text-center{
+  width: 350rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color:#fff;
+  
+  font-size: 30rpx;
+}
+.wenzi{
+-o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.jiantou image{
+  width: 40rpx;
+  height: 40rpx;
+  /* margin: auto; */
+  padding:20rpx;
+}
+.navigate-icon image{
+  width: 135rpx;
+  height: 65rpx;
+  margin-top:0;
+  margin-bottom: 0;
+  margin: auto;
+}
+.navigate-title {
+  position: relative;
+  text-align: center;
+  font-size: 32rpx;
+  color: #3c3c3c;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  margin-top:0;
+  margin-bottom: 0;
+  margin: auto;
+  margin-left: 5%;
+}
+.img-sousuo{
+  position: absolute;
+  top:9rpx;
+  left: 29%;
+  width: 30rpx;
+  height: 29rpx;
+}
+.navigate-title input[type="text"]{
+    width: 300rpx !important;
+    border-radius: 40rpx !important;
+ }
+/*箭头部分*/
+.navigator-back {
+  width: 36rpx;
+  height: 36rpx;
+  align-self: center;
+}
+ 
+.navigator-back:after {
+  content: '';
+  display: block;
+  width: 22rpx;
+  height: 22rpx;
+  border-right: 4rpx solid #000;
+  border-top: 4rpx solid #000;
+  transform: rotate(225deg);
+}
+ 
+.navigator-home {
+  width: 56rpx;
+  height: 56rpx;
+  background: url(https://qiniu-image.qtshe.com/20190301home.png) no-repeat center center;
+  background-size: 100% 100%;
+  align-self: center;
+}
+.nav_list{
+  position: relative;
+  width: 50rpx;
+  height: 40rpx;
+  padding:10rpx 10rpx 10rpx 0;
+}
+.nav_list image{
+  width: 50rpx !important;
+  height: 40rpx !important;
+}
+.index{
+  width: 40rpx !important;
+  height: 40rpx !important;
+  padding: 10rpx 20rpx 10rpx 0;
+
+}
+.liebiao{
+  position: absolute;
+  top:60rpx;
+  left:6%;
+  width: 190rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0px 0px 5px #888;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3 linear;
+}
+.liebiao-item{
+  margin:10rpx;
+  height: 50rpx;
+  color:#888;
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+}
+.liebiao-item image{
+  width: 40rpx !important;
+  height: 40rpx !important;
+  margin-right: 10rpx;
+}

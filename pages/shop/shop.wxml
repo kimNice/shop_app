@@ -1,0 +1,159 @@
+<navigate-title title="{{shop_info.name}}" />
+<view wx:if="{{not_found != 0}}">
+  <!-- top -->
+
+  <view class="fiexd" style="top:{{top_height}}px">
+    <view class="merchant-top">
+      <view class="mask"></view>
+      <view class="content-layout">
+        <view class="shop-logo">
+          <image src="{{shop_info.logo_address}}"></image>
+        </view>
+        <view class="shop-info">
+          <text class="r-p">{{shop_info.name}} 
+          <!-- <text class="bage">{{shop_info.shop_level_text}}</text> -->
+          </text>
+        </view>
+        <!-- <view class="collect-shop">
+            <view class="collect-bt">
+              <image class="bt-img" src="/images/goods-detail-favor-icon-0.png"></image>
+              <text>收藏</text>
+            </view>
+        </view> -->
+      </view>
+    </view>
+    <!-- 导航栏 -->
+    <view class="nav_list">
+      <view wx:for="{{nav_list}}" wx:key="index" class="nav_item" bindtap="onNav" data-index="{{index}}">
+        <text class="nav_text {{navIndex == index?'color':''}}">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 产品 -->
+  <view class="product_list" style="margin-top:{{top_height+285}}rpx;" hidden="{{navIndex == 0 ? false : true}}">
+    <view class="no-data" wx:if="{{shop_list.length == 0}}">
+      <view class="line"></view>
+      <view class="line-text">暂无产品</view>
+    </view>
+    <block wx:if="{{shop_list.length > 0}}">
+      <view class="list-view">
+        <view class="p_list" wx:for="{{shop_list}}" wx:key="index">
+          <navigator hover-class="none" url='/pages/goods-detail/goods-detail?goods_id={{item.id}}&type=2&shopid={{id}}'>
+            <image class="item-img" src="{{item.images}}"></image>
+            <view class="single-text item-title padding">{{item.title}}</view>
+            <view class="sales-price padding">￥{{item.sp_price}}</view>
+          </navigator>
+        </view>
+
+      </view>
+    </block>
+  </view>
+
+  <!-- 商家地址 -->
+  <view class="shop_address" style="margin-top:{{top_height+294}}rpx;" hidden="{{navIndex == 1 ? false : true}}">
+      <image src="/images/user-address.png"></image>
+      <view class="cr-888">{{shop_info.province}}{{shop_info.city}}{{shop_info.country}}{{shop_info.address}}</view>
+
+      
+    <!-- <import src="/pages/lib/all-pluy/back.wxml" />
+    <template is="pluy_back" data="{{type:'back'}}"></template> -->
+  </view>
+
+  
+  <!-- 商品分类 -->
+  <view class="classify" style="margin-top:{{top_height+295}}rpx;" hidden="{{navIndex == 2 ? false : true}}">
+
+    <view class="no-data" wx:if="{{list_classify.length == 0}}">
+      <view class="line"></view>
+      <view class="line-text">暂无分类</view>
+    </view>
+    <view wx:if="{{list_classify.length != 0 && temp_lists.length == 0 }}">
+       <!-- <import src="/pages/lib/all-pluy/back.wxml" />
+      <template is="pluy_back" data="{{type:'back'}}"></template> -->
+      <block wx:for="{{list_classify}}" wx:key="bosindex">
+        <view>
+          <!-- 一级 -->
+          <view class="classify-item" catchtap="onClassify" data-index="{{item.id}}" data-items="{{item}}">
+            <text  data-id="{{item.id}}">{{item.name}}</text>
+            <image class="classify-img" src="/images/youjiantou.png"></image>
+          </view>
+
+          <view class="item-son" style="height:{{item.id==classifyIndex?bosHeight:'0'}}rpx;">
+            <!-- 二级  -->
+            <view class="test" wx:for="{{item.items}}" wx:for-item="it" wx:key="sonindex" >
+              <view>
+                <view class="son" data-index="{{it.id}}" data-data="{{item}}" data-len="{{it}}" data-type="{{(it.items || null) != null?'Go':'No'}}" catchtap="onSon">
+                  <text>{{it.name}}</text>
+                  <image class="son-img" wx:if="{{(it.items || null) != null}}" src="/images/youjiantou.png"></image>
+                </view>
+                <!-- 三级 -->
+                <view class="sun"  style="height:{{it.id==sunIndex?sonHeight:'0'}}rpx;" >
+                  <view  wx:for="{{it.items}}" style="line-height:70rpx;" wx:key="sunindex" data-index="{{item.id}}" catchtap="onSun">
+                   {{item.name}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 分类产品 -->
+    <view wx:else>
+       <import src="/pages/lib/all-pluy/back.wxml" />
+      <template is="pluy_back" data="{{type:'backs'}}"></template>
+      <view wx:if="{{temp_lists.length > 0}}" >
+      <view class="list-view" style="margin-top:0rpx">
+        <view class="p_list" wx:for="{{temp_lists}}" wx:key="index">
+          <navigator hover-class="none" url='/pages/goods-detail/goods-detail?goods_id={{item.id}}&type=2&shopid={{id}}'>
+            <image class="item-img" src="{{item.images}}"></image>
+            <view class="single-text item-title padding">{{item.title}}</view>
+            <view class="sales-price padding">￥{{item.min_price}}</view>
+          </navigator>
+        </view>
+
+      </view>
+      </view>
+    </view>
+     
+  </view>
+
+  <!-- 品牌简介 -->
+  <view class="brief" style="margin-top:{{top_height+125}}px;" hidden="{{navIndex == 3 ? false : true}}">
+      <text>{{shop_info.description}}</text>
+      <!-- <import src="/pages/lib/all-pluy/back.wxml" />
+      <template is="pluy_back" data="{{type:'back'}}"></template> -->
+  </view>
+</view>
+
+<view wx:if="{{not_found == 0}}" class="not">
+  <image class="not-img" src="/images/empty.png"></image>
+  <view>未找到店铺</view>
+</view>
+
+<import src="/pages/common/bottom_line.wxml" />
+<template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+<!-- 底部导航 -->
+<view class="bottom_nav bg-main">
+  <view bindtap="navigation_event" class="nav-item" hover-class="none" data-type="0" data-value="https://e.shidawulian.com/index.php?s=/index/article/index/id/34.html">
+    <image src="/images/leimupinleifenleileibie.png"></image>
+    <view>攻略</view>
+  </view>
+  <!-- <navigator class="nav-item" url="/pages/goods-search/goods-search?category_id=893" hover-class="none">
+    <image src="/images/fenlei.png"></image>
+    <view>精品</view>
+  </navigator> -->
+  <navigator class="nav-item" url="/pages/user/user" hover-class="none">
+    <image src="/images/wode.png"></image>
+    <view>我的</view>
+  </navigator>
+  <view class="nav-item" bindtap="share_event">
+    <image src="/images/fenxiang-1.png"></image>
+    <view>分享</view>
+  </view>
+</view>
+
+<!-- 分享弹窗 -->
+<share-compon showShare="{{!showShare}}" id="compon"/>

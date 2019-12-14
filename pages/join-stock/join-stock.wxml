@@ -1,0 +1,20 @@
+<navigate-title title="加盟商进货" />
+<view class="join-stock" wx:if="{{not_found != 0}}">
+  <block wx:if="{{brand_merchant_goods_list_data.length > 0}}">
+    <view class="list-view">
+      <view class="p_list" wx:for="{{brand_merchant_goods_list_data}}" wx:key="index">
+        <navigator hover-class="none" url='/pages/goods-detail/goods-detail?goods_id={{item.id}}'>
+          <image class="item-img" src="{{item.images}}"></image>
+          <view class="single-text item-title">{{item.title}}</view>
+          <view class="sales-price">￥{{item.price}}</view>
+        </navigator>
+      </view>
+
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{not_found == 0}}" class="not">
+  <image class="not-img" src="/images/empty.png"></image>
+  <view>暂无进货商品</view>
+</view>
